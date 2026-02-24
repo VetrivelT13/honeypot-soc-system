@@ -1,0 +1,53 @@
+# =============================================================================
+# .gitignore — Honeypot SOC System
+# =============================================================================
+
+# ── SECRETS — NEVER commit these ─────────────────────────────────────────────
+.env
+*.env
+secrets.py
+
+# ── Database (contains real attack data / private info) ───────────────────────
+database/honeypot.db
+database/*.db
+database/*.db-shm
+database/*.db-wal
+
+# ── Live logs (can be huge, contain attacker IPs) ─────────────────────────────
+logs/
+*.json.log
+*.log
+
+# ── Generated PDF reports ─────────────────────────────────────────────────────
+reports/*.pdf
+
+# ── Python cache ──────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.pyc
+
+# ── Virtual environments ──────────────────────────────────────────────────────
+venv/
+env/
+.venv/
+.env/
+ENV/
+
+# ── OS files ──────────────────────────────────────────────────────────────────
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ── IDE files ─────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ── Cowrie (if installed locally) ─────────────────────────────────────────────
+cowrie/
+reports/output/
+reports/output/

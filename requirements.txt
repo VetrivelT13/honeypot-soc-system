@@ -1,0 +1,30 @@
+# =============================================================================
+# requirements.txt — FYProject Advanced Honeypot SOC System
+# Install: pip install -r requirements.txt
+# =============================================================================
+
+# Web Framework & Real-Time Dashboard
+flask==3.0.3
+flask-socketio==5.3.6
+flask-cors==4.0.0
+
+# HTTP Requests (Geo-lookup, Telegram, AbuseIPDB)
+requests==2.32.3
+
+# PDF Report Generation
+fpdf2==2.7.9
+
+# Scheduling / background tasks
+apscheduler==3.10.4
+
+# Date/time utilities
+python-dateutil==2.9.0
+
+# Logging enhancements
+colorlog==6.8.2
+
+# Watchdog (file system monitoring for Cowrie log tail)
+watchdog==4.0.1
+
+# Utilities
+python-dotenv==1.0.1
