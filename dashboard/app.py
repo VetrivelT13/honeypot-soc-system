@@ -11,7 +11,8 @@ from flask_socketio import SocketIO, emit
 from flask_cors import CORS
 
 import sys
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+_DASHBOARD_DIR = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.dirname(_DASHBOARD_DIR))
 import config
 
 logger = logging.getLogger(__name__)
@@ -28,8 +29,8 @@ def create_dashboard(db_manager):
 
     app = Flask(
         __name__,
-        template_folder=r"C:\Users\vetri\Desktop\FYProject\dashboard\templates",
-        static_folder=r"C:\Users\vetri\Desktop\FYProject\dashboard\static",
+        template_folder=os.path.join(_DASHBOARD_DIR, "templates"),
+        static_folder=os.path.join(_DASHBOARD_DIR, "static"),
     )
     app.secret_key = config.DASHBOARD_SECRET_KEY
     CORS(app)
