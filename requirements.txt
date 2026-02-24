@@ -28,3 +28,7 @@ watchdog==4.0.1
 
 # Utilities
 python-dotenv==1.0.1
+
+# Production server (for Render.com deployment)
+gunicorn==21.2.0
+eventlet==0.35.2

@@ -7,7 +7,7 @@
 import sys, os, queue, logging, threading, time
 import colorlog
 
-PROJECT_ROOT = r"C:\Users\vetri\Desktop\FYProject"
+PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 if PROJECT_ROOT not in sys.path:
     sys.path.insert(0, PROJECT_ROOT)
 
@@ -51,9 +51,9 @@ def print_banner():
 
 def ensure_directories():
     dirs = [
-        r"C:\Users\vetri\Desktop\FYProject\database",
-        r"C:\Users\vetri\Desktop\FYProject\logs\cowrie",
-        r"C:\Users\vetri\Desktop\FYProject\reports\output",
+        os.path.join(PROJECT_ROOT, "database"),
+        os.path.join(PROJECT_ROOT, "logs", "cowrie"),
+        os.path.join(PROJECT_ROOT, "reports", "output"),
     ]
     for d in dirs:
         os.makedirs(d, exist_ok=True)
